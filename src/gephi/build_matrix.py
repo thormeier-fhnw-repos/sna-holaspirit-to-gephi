@@ -7,7 +7,7 @@ def build_matrix(distinct_persons, pairs, anonymize):
     :param distinct_persons: A list of distinct person names
     :param pairs: A list of pairs and their weight
     :param anonymize: If the list should be anonymized, i.e. replacing names with numbers
-    :return: Matrix
+    :return: Matrix that has all connections as 1, missing connections as 0
     """
 
     no_persons = len(distinct_persons) + 1 # Header/left-most col containing names

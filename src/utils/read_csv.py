@@ -6,7 +6,6 @@ def read_csv(filename):
     :param filename:
     :return: CSV data
     """
-
     with (open(filename, "r")) as csvfile:
         rows = []
         csv_reader = csv.reader(csvfile, delimiter=",", quotechar="\"")

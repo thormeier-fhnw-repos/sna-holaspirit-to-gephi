@@ -4,7 +4,7 @@ def get_distinct_rows(data_raw, processor, filter):
     :param data_raw: The raw CSV data
     :param processor: How to process a given row
     :param filter: Filter that determines if the row should be added or not
-    :return:
+    :return: List fo distinct rows
     """
     rows  = []
 

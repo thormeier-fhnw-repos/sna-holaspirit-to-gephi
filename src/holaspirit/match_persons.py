@@ -5,7 +5,6 @@ def match_persons(persons_with_roles, determine_weight):
     :param determine_weight: A function that determines the weight of the relationship
     :return: List of tuples that contain Person A, Person B and the weight of their relationship
     """
-
     pairs = []
 
     for person_a,values_a in persons_with_roles.items():
