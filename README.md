@@ -5,7 +5,7 @@ CSV format.
 
 ## Data model
 
-This script creates two one-mode networks with bi-deirectional edges and people as nodes. There's two different kinds 
+This script creates two one-mode networks with bi-directional edges and people as nodes. There's two different kinds 
 edges: Same role and same circle.
 
 ## Usage
