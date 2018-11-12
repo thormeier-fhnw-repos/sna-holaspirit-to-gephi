@@ -21,7 +21,7 @@ There's two mandatory parameters, the `--source-file` parameter determines which
 ./holaspirit-to-python.py --source-file=file-to-load.csv --target-roles-file=file-to-write-roles-replationship.csv --target-circles-file=file-to-write-circles-replationship.csv
 ```
 
-After the script finished execution,
+After the script finished execution, the matrices will be stored in their respective CSV files.
 
 ## Anonymize the data
 
