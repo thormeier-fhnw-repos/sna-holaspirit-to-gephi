@@ -1,7 +1,7 @@
 # Holaspirit to Gephi converter
 
 This Python script takes a CSV Export of the members/roles list of Holaspirit and transforms it into a Gephi-friendly 
-CSV format.
+CSV format. **Requires Python >= 3.6**
 
 ## Data model
 
