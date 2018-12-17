@@ -1,1 +1,6 @@
 __pycache__
+data/raw/*
+!data/raw/.gitkeep
+data/gephi-ready/*
+!data/gephi-ready/.gitkeep
+anonymize_map.csv

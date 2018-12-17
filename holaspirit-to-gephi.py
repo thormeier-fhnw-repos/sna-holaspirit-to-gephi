@@ -12,6 +12,7 @@ from src.utils.map_to_list_csv import map_to_list_csv
 
 from src.holaspirit.get_circle import get_circle
 from src.holaspirit.get_role import get_role
+from src.holaspirit.get_name import get_name
 from src.holaspirit.get_person_dict import get_person_dict
 from src.holaspirit.get_distinct_rows import get_distinct_rows
 from src.holaspirit.match_persons import match_persons
@@ -48,7 +49,7 @@ data_raw = read_csv(source)
 print("  - Number of rows read:", len(data_raw) - 1)
 
 print("Identifying distinct nodes")
-persons = get_distinct_rows(data_raw, lambda row: row[0] + " " + row[1], lambda value: len(value) > 1)
+persons = get_distinct_rows(data_raw, get_name, lambda value: len(value) > 1)
 print("  - Number of persons, i.e. nodes:", len(persons))
 
 print("Identifying distinct roles")
