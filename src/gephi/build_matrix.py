@@ -1,6 +1,6 @@
-from pprint import pprint
+from src.gephi.create_empty_matrix import create_empty_matrix
 
-def build_matrix(distinct_persons, pairs, anonymize):
+def build_matrix(distinct_persons, pairs):
     """
     Creates a NxN matrix that represents which individual of a list of piars is matched with whom
     Should be importable in Gephi
@@ -10,19 +10,15 @@ def build_matrix(distinct_persons, pairs, anonymize):
     :return: Matrix that has all connections as 1, missing connections as 0
     """
 
-    no_persons = len(distinct_persons) + 1 # Header/left-most col containing names
-
-    # Prepare matrix full of 0s, we only need to fill in 1s
-    matrix = [[0 for col in range(no_persons)] for row in range(no_persons)]
-
-    matrix[0][0] = ""
+    matrix = create_empty_matrix(distinct_persons)
 
     for pair in pairs:
         x = distinct_persons.index(pair[0]) + 1
         y = distinct_persons.index(pair[1]) + 1
 
-        matrix[x][0] = pair[0] if not anonymize else distinct_persons.index(pair[0])
-        matrix[0][y] = pair[1] if not anonymize else distinct_persons.index(pair[1])
-        matrix[x][y] = pair[2]
+        if x == y:
+            continue
+
+        matrix[x][y] += pair[2]
 
     return matrix
