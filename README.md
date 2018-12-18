@@ -129,7 +129,7 @@ created with `holaspirit-roles-gephi-attributes.py`
 
 ```
 usage: attach-attributes.py [-h] --attributes-file ATTRS --expartners-file
-                            EXPARTNERS --startdates-file STARTDATES
+                            EXPARTNERS --zebra-file ZEBRA
 
 Attaches further attributes to a given attributes CSV
 
@@ -142,8 +142,7 @@ required named arguments:
   --expartners-file EXPARTNERS
                         File containing a list of names that used to be
                         partners
-  --startdates-file STARTDATES
-                        File containing a list of all start dates of all names
+  --zebra-file ZEBRA    File containing an export of Zebra
 ```
 
 ## anonymize-attributes.py
